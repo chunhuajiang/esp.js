@@ -75,7 +75,7 @@ $(JS):
 # Update dependency repBASE
 .PHONY: update
 update:
-	@git submodule update --init
+	git submodule update --init --recursive
 
 # Explicit clean
 .PHONY: clean
