@@ -113,3 +113,15 @@ main (int argc,
 
   return ret_code;
 } /* main */
+
+void app_main()
+{
+#if 0
+  const jerry_char_t script[] = "print ('Hello, World!');";
+  size_t script_size = strlen ((const char *) script);
+  
+  jerry_run_simple (script, script_size, JERRY_INIT_EMPTY);
+
+#endif
+  return;
+}
