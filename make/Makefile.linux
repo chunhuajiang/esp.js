@@ -23,12 +23,7 @@ ifeq ($(shell uname -s), Linux)
 LINUX_LIBS +=		-pthread
 endif
 
-LINUX_DEFINES +=	-DZJS_LINUX_BUILD \
-			-DBUILD_MODULE_EVENTS \
-			-DBUILD_MODULE_PERFORMANCE \
-			-DBUILD_MODULE_CONSOLE \
-			-DZJS_PRINT_FLOATS \
-			-DBUILD_MODULE_BUFFER \
+LINUX_DEFINES +=	-DBASE_IS_LINUX \
 			-DBUILD_MODULE_TEST_PROMISE
 
 LINUX_FLAGS += 	-fno-asynchronous-unwind-tables \
