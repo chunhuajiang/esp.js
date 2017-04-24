@@ -7,8 +7,7 @@ JERRY_BASE ?= $(ROOT_DIR)/deps/jerryscript
 BUILD_DIR = $(ROOT_DIR)/outdir/$(BASE)/$(TARGET)
 
 ESPIDF_INCLUDES += 	-I$(ROOT_DIR)/src/ \
-			-I$(JERRY_BASE)/targets/default \
-			-I$(JERRY_BASE)/jerry-core
+			-I$(JERRY_BASE)/targets/default 
 
 JERRY_LIBS += 		-l jerry-core -lm
 
@@ -16,9 +15,7 @@ JERRY_LIB_PATH += 	-L $(JERRY_BASE)/build/lib/
 
 ESPIDF_DEFINES +=	-DBASE_IS_ESPIDF
 
-
 CFLAGS += $(ESPIDF_INCLUDES) 
-
 export CFLAGS
 
 .PHONY: jerry
@@ -42,3 +39,4 @@ PROJECT_NAME := esp32js
 
 export IDF_PATH=$(ROOT_DIR)/deps/esp-idf
 include $(IDF_PATH)/make/project.mk
+
