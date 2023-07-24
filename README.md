@@ -19,7 +19,7 @@ sudo apt-get install -y gcc gcc-arm-none-eabi cmake cppcheck vera++ git wget mak
 
 由于仓库是通过 gitsubmodule 来管理依赖仓库的，所以必须通过 git 命令来获取 esp.js 的源代码：
 ```
-git clone https://github.com/tidyjiang8/esp.js.git
+git clone https://github.com/chunhuajiang/esp.js.git
 ```
 
 克隆完成后，进入`esp.js`所在目录，执行`make update`命令更新依赖的仓库：
